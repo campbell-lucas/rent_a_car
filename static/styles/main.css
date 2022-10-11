@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+.search-box {
+    width: 40%;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbar {
+    text-align: right;
+}
