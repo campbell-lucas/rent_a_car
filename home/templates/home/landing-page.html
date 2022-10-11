@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+{% endblock styles %}
 
 {% block container %}
-    <h1>Landing Page placeholder</h1>
+    <nav class="navbar">
+        <a href="#">Signup</a>
+        <a href="#">Login</a>
+    </nav>
+    <h1>Rent A Car</h1>
+    <hr>
+    <br>
+    <div class="search-box">
+        <label for="vehicle-search">
+            <input type="text" placeholder="Vehicle..." id="vehicle-search">
+        </label>
+        <label for="city-search">
+            <input type="text" placeholder="City..." id="city-search">
+        </label>
+        <button type="submit">Search</button>
+    </div>
 {% endblock container %}
