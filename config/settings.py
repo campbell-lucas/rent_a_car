@@ -10,12 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+
 import environ
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+environ.Env.read_env(os.path.join(BASE_DIR, 'env', '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +30,7 @@ SECRET_KEY = 'django-insecure-^o0m^%^^pbxol1z33#b#n8z0a#g!5ec%&l^2h=bc2egq1e#mn_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('DJ_ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = os.environ.get('DJ_ALLOWED_HOSTS', '').split()
 
 
 # Application definition
@@ -40,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'home.apps.HomeConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -119,6 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
