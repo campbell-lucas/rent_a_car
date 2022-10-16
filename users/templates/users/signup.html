@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
 {% block container %}
-    <label for="signup-username">
-        <input type="text" placeholder="Username" id="signup-username">
-    </label>
-    <label for="signup-password">
-        <input type="password" placeholder="Password" id="signup-password">
-    </label>
-    <button type="submit">Login</button>
+    <h1>Signup</h1>
+    <hr>
+    <br>
+    <div class="search-box">
+        <label for="signup-username">
+            <input type="text" placeholder="Username" id="signup-username">
+        </label>
+        <label for="signup-password">
+            <input type="password" placeholder="password" id="signup-password">
+        </label>
+        <button type="submit">Signup</button>
+    </div>
 {% endblock container %}
