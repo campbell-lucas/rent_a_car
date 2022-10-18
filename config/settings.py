@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 
+import dj_database_url
 import environ
 
 from pathlib import Path
@@ -88,6 +89,10 @@ DATABASES = {
     }
 }
 
+DATABASE_URL = os.environ.get('DB_CONNECTION_STRING')
+db_config = dj_database_url.config(default=DATABASE_URL)
+
+DATABASES['default'].update(db_config)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
