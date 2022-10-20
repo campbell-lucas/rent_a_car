@@ -2,15 +2,18 @@
 
 {% block container %}
     <h1>Signup</h1>
-    <hr>
-    <br>
-    <div class="search-box">
-        <label for="signup-username">
-            <input type="text" placeholder="Username" id="signup-username">
-        </label>
-        <label for="signup-password">
-            <input type="password" placeholder="password" id="signup-password">
-        </label>
-        <button type="submit">Signup</button>
-    </div>
+        <form action="{% url 'users:signup' %}" method="post">
+{#        <label for="signup-email">#}
+{#        <input type="text" placeholder="Email" id="signup-email">#}
+{#        </label>#}
+{#        <label for="signup-username">#}
+{#            <input type="text" placeholder="Username" id="signup-username">#}
+{#        </label>#}
+{#        <label for="signup-password">#}
+{#            <input type="password" placeholder="password" id="signup-password">#}
+{#        </label>#}
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Signup</button>
+        </form>
 {% endblock container %}
