@@ -1,10 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views.generic import FormView
 from . import forms
-
-
-def login_view(request):
-    return render(request, 'users/login.html')
 
 
 class SignupView(FormView):
