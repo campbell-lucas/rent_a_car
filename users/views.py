@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, reverse
 from django.views.generic import FormView
 from . import forms
@@ -14,3 +15,8 @@ class SignupView(FormView):
             user.is_active = True
             user.save()
         return super().form_valid(form)
+
+
+@login_required
+def profile_view(request):
+    return render(request, 'users/profile.html')
