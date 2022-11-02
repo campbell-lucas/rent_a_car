@@ -38,3 +38,12 @@ nav ul li:first-child {
     margin-right: auto;
     padding-left: 10px;
 }
+
+.password-change-form ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.password-change-form {
+    text-align: center;
+}
