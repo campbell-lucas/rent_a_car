@@ -47,3 +47,11 @@ nav ul li:first-child {
 .password-change-form {
     text-align: center;
 }
+
+.login-form {
+    text-align: center;
+}
+
+.helptext {
+    visibility: hidden;
+}
