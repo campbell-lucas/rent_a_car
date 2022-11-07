@@ -4,5 +4,5 @@
     <h1>My Profile</h1>
     <hr>
     <p><a href="{% url 'password_change' %}">Change Password</a></p>
-    <p><a href="#">Add your car</a></p>
+    <p><a href="{% url 'cars:add-car'%}">Add your car</a></p>
 {% endblock container %}
