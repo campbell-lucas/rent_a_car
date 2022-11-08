@@ -1,5 +1,6 @@
 import django.contrib.auth.models
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -16,8 +17,7 @@ class Car(models.Model):
     number_of_seats = models.CharField(max_length=100)
     number_of_doors = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='car_category')
-    owner = models.ForeignKey(django.contrib.auth.models.User, on_delete=models.CASCADE, related_name='car_owner',
-                              default=None)
+    owner = models.ForeignKey(django.contrib.auth.models.User, on_delete=models.CASCADE, related_name='car_owner')
 
     def __str__(self):
         return self.car_model
