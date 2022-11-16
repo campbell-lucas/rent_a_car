@@ -10,12 +10,11 @@
     <hr>
     <br>
     <div class="search-box">
-        <label for="vehicle-search">
-            <input type="text" placeholder="Vehicle..." id="vehicle-search">
-        </label>
-        <label for="city-search">
-            <input type="text" placeholder="City..." id="city-search">
-        </label>
-        <button type="submit">Search</button>
+        <form action="{% url 'home:car-search' %}" method="get">
+            <label for="city-search">
+                <input name='q' type="text" placeholder="City..." id="city-search">
+                <button type="submit">Search</button>
+            </label>
+        </form>
     </div>
 {% endblock container %}
