@@ -6,4 +6,5 @@ app_name = 'cars'
 
 urlpatterns = [
     path('add_car/', views.AddCarView.as_view(), name='add-car'),
+    path('car_profile/<int:pk>/', views.CarProfileView.as_view(), name='car-profile'),
 ]
