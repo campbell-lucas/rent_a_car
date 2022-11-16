@@ -17,6 +17,7 @@ class AddCarView(CreateView):
         'number_of_doors',
         'category',
         'owner',
+        'location',
     ]
 
     template_name = 'cars/add_car.html'

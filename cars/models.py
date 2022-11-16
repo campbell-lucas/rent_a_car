@@ -18,6 +18,8 @@ class Car(models.Model):
     number_of_doors = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='car_category')
     owner = models.ForeignKey(django.contrib.auth.models.User, on_delete=models.CASCADE, related_name='car_owner')
+    is_rented = models.BooleanField(default=False)
+    location = models.CharField(max_length=150, default=None)
 
     def __str__(self):
         return self.car_model
