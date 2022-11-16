@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 from django.contrib.auth.models import User
 
 from cars import forms, models
@@ -33,11 +33,10 @@ class AddCarView(CreateView):
         return super().form_valid(form)
 
 
-# def add_car_view(request):
-#     form = forms.AddCarForm(request.POST or None)
-#     if request.method == 'POST':
-#         if form.is_valid():
-#             car = form.save(commit=False)
-#             car.save()
-#             return redirect(reverse_lazy('users:profile'))
-#     return render(request, 'cars/add_car.html', {'form': form})
+class CarProfileView(DetailView):
+
+    model = models.Car
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
