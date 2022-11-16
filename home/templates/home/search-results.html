@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <h1>Search Results</h1>
+    <hr>
+    <ul>
+        {% for car in object_list %}
+            <li>
+                <a href="#">{{ car.car_brand }} {{ car.car_model }}</a>
+            </li>
+            {% empty %}
+                No cars in this city yet
+        {% endfor %}
+    </ul>
+{% endblock container %}
