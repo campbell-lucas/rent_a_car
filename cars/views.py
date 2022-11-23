@@ -18,6 +18,7 @@ class AddCarView(CreateView):
         'category',
         'owner',
         'location',
+        'price_per_day',
     ]
 
     template_name = 'cars/add_car.html'
