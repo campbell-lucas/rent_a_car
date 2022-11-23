@@ -1,4 +1,4 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, TemplateView
 from django.contrib.auth.models import User
@@ -43,5 +43,6 @@ class CarProfileView(DetailView):
         return context
 
 
-class CarRentView(TemplateView):
-    pass
+class CarRent(TemplateView):
+    template_name = 'cars/car_rent.html'
+
