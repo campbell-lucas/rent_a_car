@@ -20,6 +20,7 @@ class Car(models.Model):
     owner = models.ForeignKey(django.contrib.auth.models.User, on_delete=models.CASCADE, related_name='car_owner')
     is_rented = models.BooleanField(default=False)
     location = models.CharField(max_length=150, default=None)
+    price_per_day = models.PositiveIntegerField(default=100)
 
     def __str__(self):
         return self.car_model
