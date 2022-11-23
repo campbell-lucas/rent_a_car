@@ -54,9 +54,15 @@ nav ul li:first-child {
 }
 
 .login-form {
-    text-align: center;
+    padding-top: 15px;
+    position: relative;
+    margin-left: 42%;
 }
 
 .helptext {
     visibility: hidden;
+}
+
+#id_username {
+
 }
