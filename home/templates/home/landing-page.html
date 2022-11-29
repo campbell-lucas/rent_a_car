@@ -6,15 +6,18 @@
 {% endblock styles %}
 
 {% block container %}
-    <h1>Rent A Car</h1>
-    <hr>
-    <br>
-    <div class="search-box">
-        <form action="{% url 'home:car-search' %}" method="get">
-            <label for="city-search">
-                <input name='q' type="text" placeholder="City..." id="city-search">
-                <button type="submit">Search</button>
-            </label>
-        </form>
+    <div class="backdrop">
+        <h1>Rent A Car</h1>
+        <hr>
+        <br>
+        <div class="search-box">
+            <form action="{% url 'home:car-search' %}" method="get">
+                <label for="city-search">
+                    <input name='q' type="text" placeholder="City..." id="city-search">
+                    <button type="submit">Search</button>
+                </label>
+            </form>
+        </div>
     </div>
+
 {% endblock container %}
