@@ -7,9 +7,10 @@
 
 {% block container %}
     <div class="backdrop">
-        <h1>Rent A Car</h1>
-        <hr>
-        <br>
+        <div class="title-container">
+            <h1 class="title">Rent A Car</h1>
+            <br>
+        </div>
         <div class="search-box">
             <form action="{% url 'home:car-search' %}" method="get">
                 <label for="city-search">

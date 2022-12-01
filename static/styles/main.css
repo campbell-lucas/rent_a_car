@@ -1,6 +1,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: lightgray;
 }
 
 h1 {
@@ -26,10 +27,13 @@ nav ul {
     padding: 0;
     max-height: 4em;
     display: flex;
+    background-color: lightgray;
 }
 nav ul li {
     display: inline-block;
     list-style-type: none;
+    border: 2px solid;
+
 }
 
 nav ul li a {
@@ -68,7 +72,21 @@ nav ul li:first-child {
 }
 
 .backdrop {
-    height: 750px;
+    height: 1000px;
     background: url("/static/images/car-forest.jpg") no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+div .title-container {
+    background-color: white;
+    position: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.title {
+    font-size: 64px;
+    text-align: center;
+    padding: 0;
 }
