@@ -1,7 +1,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: lightgray;
+    background: url("/static/images/car-forest.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 h1 {
@@ -27,12 +29,10 @@ nav ul {
     padding: 0;
     max-height: 4em;
     display: flex;
-    background-color: lightgray;
 }
 nav ul li {
     display: inline-block;
     list-style-type: none;
-    border: 2px solid;
 
 }
 
@@ -41,6 +41,9 @@ nav ul li a {
     line-height: 4em;
     padding-right: 1em;
     text-decoration: none;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: white;
 }
 
 nav ul li:first-child {
@@ -71,22 +74,19 @@ nav ul li:first-child {
 
 }
 
-.backdrop {
-    height: 1000px;
-    background: url("/static/images/car-forest.jpg") no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-div .title-container {
-    background-color: white;
-    position: center;
-    margin-left: 25%;
-    margin-right: 25%;
-}
+/*.backdrop {*/
+/*    height: 1000px;*/
+/*    background: url("/static/images/car-forest.jpg") no-repeat;*/
+/*    background-size: cover;*/
+/*    position: relative;*/
+/*}*/
 
 .title {
     font-size: 64px;
     text-align: center;
-    padding: 0;
+    border: 5px solid;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 33%;
+    margin-right: 33%;
 }
