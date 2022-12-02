@@ -14,6 +14,7 @@ class SearchResultsView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Car.objects.all().filter(location=query)
+        category = self.request.GET.get('categories')
+        object_list = Car.objects.all().filter(location=query, category=category)
         return object_list
 
