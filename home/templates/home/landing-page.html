@@ -10,7 +10,7 @@
         <h1 class="title">Rent A Car</h1>
             <br>
         <div class="search-box">
-            <form action="{% url 'home:car-search' %}" method="get">
+            <form action="{% url 'home:car-search' %}" method="get" class="search-form">
                 <label for="city-search">
                     <input name='q' type="text" placeholder="City..." id="city-search">
                     <button type="submit">Search</button>
