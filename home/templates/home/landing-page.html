@@ -12,9 +12,14 @@
         <div class="search-box">
             <form action="{% url 'home:car-search' %}" method="get" class="search-form">
                 <label for="city-search">
-                    <input name='q' type="text" placeholder="City..." id="city-search">
-                    <button type="submit">Search</button>
+                    <input name='q' type="text" placeholder="Warsaw..." id="city-search" required>
                 </label>
+                <label for="categories">
+                    <select name="categories" id="categories">
+                        <option value="SUV">SUV</option>
+                    </select>
+                </label>
+                 <button type="submit">Search</button>
             </form>
         </div>
     </div>
