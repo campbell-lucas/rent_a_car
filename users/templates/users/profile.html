@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block container %}
-    <h1>My Profile</h1>
-    <hr>
-    <p><a href="{% url 'password_change' %}">Change Password</a></p>
-    <p><a href="{% url 'cars:add-car'%}">Add your car</a></p>
+    <div class="my-profile">
+        <h1>My Profile</h1>
+        <div class="my-profile-items">
+            <p><a href="{% url 'password_change' %}">Change Password</a></p>
+            <p><a href="{% url 'cars:add-car'%}">Add your car</a></p>
+        </div>
+    </div>
 {% endblock container %}
