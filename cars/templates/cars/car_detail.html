@@ -2,30 +2,30 @@
 
 {% block container %}
     <h1>Car Profile</h1>
-    <hr>
-    <ul>
-        <li>
-            Car Brand : {{ object.car_brand }}
-        </li>
-        <li>
-            Car Model :  {{ object.car_model }}
-        </li>
-        <li>
-            Car Color : {{ object.car_color }}
-        </li>
-        <li>
-            Number of doors : {{ object.number_of_doors }}
-        </li>
-        <li>
-            Number of seats : {{ object.number_of_seats }}
-        </li>
-        <li>
-            Price per day: ${{ object.price_per_day }}
-        </li>
-    </ul>
+    <div class="car-profile">
+        <ul>
+            <li>
+                Car Brand : {{ object.car_brand }}
+            </li>
+            <li>
+                Car Model :  {{ object.car_model }}
+            </li>
+            <li>
+                Car Color : {{ object.car_color }}
+            </li>
+            <li>
+                Number of doors : {{ object.number_of_doors }}
+            </li>
+            <li>
+                Number of seats : {{ object.number_of_seats }}
+            </li>
+            <li>
+                Price per day: ${{ object.price_per_day }}
+            </li>
+        </ul>
 
-    <a href="{% url 'cars:car_rent' pk=object.pk %}">
-        <button type="submit" id="rent-car-button">Rent this car</button>
-    </a>
-
+        <a href="{% url 'cars:car_rent' pk=object.pk %}">
+            <button type="submit" id="rent-car-button">Rent this car</button>
+        </a>
+    </div>
 {% endblock container %}
