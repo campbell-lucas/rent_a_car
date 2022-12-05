@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
 {% block container %}
-    <h1>Search Results</h1>
-    <hr>
-    <ul>
-        {% for car in object_list %}
-            <li>
-                <a href="{% url 'cars:car-profile' pk=car.pk%}">{{ car.car_brand }} {{ car.car_model }}</a>
-            </li>
-            {% empty %}
-                No cars in this city yet
-        {% endfor %}
-    </ul>
+    <h1 id="search-result-title">Search Results</h1>
+    <div class="car-search-results">
+        <ul>
+            {% for car in object_list %}
+                <li>
+                    <a href="{% url 'cars:car-profile' pk=car.pk%}">{{ car.car_brand }} {{ car.car_model }}</a>
+                </li>
+                {% empty %}
+                    <h1>No cars in this city yet</h1>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock container %}

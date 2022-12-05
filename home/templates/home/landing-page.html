@@ -11,6 +11,7 @@
             <br>
         <div class="search-box">
             <form action="{% url 'home:car-search' %}" method="get" class="search-form">
+                {% csrf_token %}
                 <label for="city-search">
                     <input name='q' type="text" placeholder="Warsaw..." id="city-search" required>
                 </label>
