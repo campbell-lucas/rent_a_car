@@ -23,6 +23,7 @@ nav {
     margin: 0;
     padding-bottom: 20px;
     overflow: hidden;
+    font-size: 16px;
 }
 
 nav ul {
@@ -43,9 +44,9 @@ nav ul li a {
     text-decoration: none;
     border: 2px solid;
     border-radius: 30px;
-    background-color: darkkhaki;
-    padding-left: 5px;
-    padding-right: 5px;
+    background-color: #f7f7f7db;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 nav ul li:first-child {
@@ -70,12 +71,6 @@ nav ul li:nth-child(3) {
     text-align: center;
 }
 
-.login-form {
-    padding-top: 15px;
-    position: relative;
-    margin-left: 42%;
-}
-
 .helptext {
     visibility: hidden;
 }
@@ -85,15 +80,16 @@ nav ul li:nth-child(3) {
     text-align: center;
     border: 5px solid;
     border-radius: 10px;
-    background-color: white;
+    background-color: #f7f7f7db;
     margin-left: 33%;
     margin-right: 33%;
 }
 
 div .search-box{
     border: 5px solid;
-    background-color: white;
+    background-color: #f7f7f7db;
     display: flex;
+    border-radius: 10px;
 }
 
 .search-form {
@@ -107,6 +103,7 @@ div .search-box{
     border-radius: 10px;
     font-size: 32px;
     margin-top: 10px;
+    background-color: #ffffffdb;
 }
 
 .search-form select {
@@ -115,6 +112,7 @@ div .search-box{
     border-radius: 10px;
     font-size: 32px;
     margin-top: 10px;
+    background-color: #ffffffdb;
 }
 
 .search-form select:hover {
@@ -132,4 +130,54 @@ div .search-box{
 #car-search-button:hover {
     background: #79aec8;
     cursor: pointer;
+}
+
+.car-search-results {
+    background: #f7f7f7db;
+    max-width: 33%;
+}
+
+.car-profile {
+    background: #f7f7f7db;
+    max-width: 33%;
+}
+
+.login {
+    background-color: #f7f7f7db;
+    margin: auto;
+    max-width: 400px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: #1b1b1b;
+}
+
+.login-form {
+    padding: 15px;
+    font-size: 22px;
+}
+
+.login-form input {
+    font-size: 22px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.login-form button {
+    font-size: 16px;
+    padding: 6px;
+
+
+}
+
+.login h1 {
+    font-size: 64px;
+
+}
+
+.login p {
+    text-align: center;
+}
+
+.my-profile {
+    background-color: #f7f7f7db;
 }
