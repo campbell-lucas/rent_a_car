@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
 {% block container %}
-    <h1>Login</h1>
-    <hr>
-    <br>
-    <div class="search-box">
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Login</button>
-        </form>
+    <div class="login">
+        <h1>Login</h1>
+        <br>
+        <div class="login-form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </div>
+
 {% endblock container %}
