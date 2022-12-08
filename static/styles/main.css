@@ -78,7 +78,7 @@ nav ul li:nth-child(3) {
 .title {
     font-size: 64px;
     text-align: center;
-    border: 5px solid;
+    border: 3px solid;
     border-radius: 10px;
     background-color: #f7f7f7db;
     margin-left: 33%;
@@ -86,7 +86,7 @@ nav ul li:nth-child(3) {
 }
 
 div .search-box{
-    border: 5px solid;
+    border: 3px solid;
     background-color: #f7f7f7db;
     display: flex;
     border-radius: 10px;
@@ -180,4 +180,20 @@ div .search-box{
 
 .my-profile {
     background-color: #f7f7f7db;
+}
+
+.signup-header {
+    background: #f7f7f7db;
+    margin: auto;
+    max-width: 400px;
+    border: 3px solid;
+    border-radius: 10px;
+}
+
+.signup-header h1 {
+    font-size: 64px;
+}
+
+.signup-form {
+    text-align: center;
 }
