@@ -8,6 +8,10 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = get_user_model()
         fields = ('username', 'email', 'password')
+        help_texts = {
+            'username': None,
+            'email': None,
+        }
 
     def save(self, commit=True):
         user = super().save(commit=False)
