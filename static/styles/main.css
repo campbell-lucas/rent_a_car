@@ -135,11 +135,36 @@ div .search-box{
 .car-search-results {
     background: #f7f7f7db;
     max-width: 33%;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.car-search-results h1 {
+    font-size: 36px;
+}
+
+.car-search-items li {
+    font-size: 24px;
+    text-decoration: none;
 }
 
 .car-profile {
     background: #f7f7f7db;
+    border: 3px solid;
+    border-radius: 10px;
     max-width: 33%;
+    margin: auto;
+}
+
+.car-profile-info {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.car-profile-info button {
+    font-size: 26px;
+    margin: 10px;
 }
 
 .login {
@@ -197,3 +222,5 @@ div .search-box{
 .signup-form {
     text-align: center;
 }
+
+
