@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block container %}
-    <h1>Add your car</h1>
-    <hr>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add</button>
-    </form>
+    <div class="add-car">
+        <h1>Add your car</h1>
+        <div class="add-car-form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
 {% endblock container %}
