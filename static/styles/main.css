@@ -11,14 +11,6 @@ h1 {
     margin: 0;
 }
 
-.search-box {
-    width: 40%;
-    height: 200px;
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-}
-
 nav {
     margin: 0;
     padding-bottom: 20px;
@@ -62,35 +54,42 @@ nav ul li:nth-child(3) {
     margin-right: 10px;
 }
 
-.password-change-form ul {
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.password-change-form {
-    text-align: center;
-}
-
 .helptext {
     visibility: hidden;
 }
 
-.title {
-    font-size: 64px;
-    text-align: center;
+.search-box {
+    background-color: #f7f7f7db;
+    width: 33%;
+    margin: auto;
     border: 3px solid;
     border-radius: 10px;
-    background-color: #f7f7f7db;
-    margin-left: 33%;
-    margin-right: 33%;
 }
 
-div .search-box{
-    border: 3px solid;
-    background-color: #f7f7f7db;
+.search-box h1 {
+    font-size: 60px;
+}
+
+.search-box-items {
+    text-align: center;
+    justify-content: center;
     display: flex;
     border-radius: 10px;
 }
+
+.search-box-items input {
+    max-width: 400px;
+}
+
+.search-box-items select {
+    max-width: 500px;
+}
+
+.search-box-items-button {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
 
 .search-form {
     margin: auto;
@@ -190,8 +189,6 @@ div .search-box{
 .login-form button {
     font-size: 16px;
     padding: 6px;
-
-
 }
 
 .login h1 {
@@ -205,6 +202,15 @@ div .search-box{
 
 .my-profile {
     background-color: #f7f7f7db;
+    max-width: 33%;
+    margin: auto;
+    border: 3px solid;
+    border-radius: 10px;
+}
+
+.my-profile-items {
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 .signup-header {
@@ -222,5 +228,51 @@ div .search-box{
 .signup-form {
     text-align: center;
 }
+
+.password-change {
+    background-color: #f7f7f7db;
+    max-width: 33%;
+    margin: auto;
+    border: 3px solid;
+    border-radius: 10px;
+}
+
+.password-change h1 {
+    font-size: 36px;
+}
+
+.password-change-form {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.password-change-form ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.password-change-form button {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.add-car {
+    background-color: #f7f7f7db;
+    max-width: 33%;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.add-car-form {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.add-car-form button {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
 
 
