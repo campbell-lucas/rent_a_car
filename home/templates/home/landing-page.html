@@ -6,27 +6,30 @@
 {% endblock styles %}
 
 {% block container %}
-    <div class="backdrop">
-        <h1 class="title">Rent A Car</h1>
-            <br>
         <div class="search-box">
-            <form action="{% url 'home:car-search' %}" method="get" class="search-form">
-                {% csrf_token %}
-                <label for="city-search">
-                    <input name='q' type="text" placeholder="Warsaw..." id="city-search" required>
-                </label>
-                <label for="categories">
-                    <select name="categories" id="categories">
-                        <option value="1">SUV</option>
-                        <option value="2">Combi</option>
-                        <option value="3">Hatchback</option>
-                        <option value="4">Sedan</option>
-                        <option value="5">Offroad</option>
-                    </select>
-                </label>
-                 <button type="submit" id="car-search-button">Search</button>
-            </form>
-        </div>
-    </div>
+            <h1>Rent a Car</h1>
+            <div class="search-box-items">
+                <form action="{% url 'home:car-search' %}" method="get" class="search-form">
+                    {% csrf_token %}
+                    <label for="city-search">
+                        <input name='q' type="text" placeholder="Warsaw..." id="city-search" required>
+                    </label>
+                    <div class="search-box-items-select">
+                        <label for="categories">
+                            <select name="categories" id="categories">
+                                <option value="1">SUV</option>
+                                <option value="2">Combi</option>
+                                <option value="3">Hatchback</option>
+                                <option value="4">Sedan</option>
+                                <option value="5">Offroad</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="search-box-items-button">
+                        <button type="submit" id="car-search-button">Search</button>
+                    </div>
+                </form>
+            </div>
 
+        </div>
 {% endblock container %}
