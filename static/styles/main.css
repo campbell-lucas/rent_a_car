@@ -124,6 +124,7 @@ nav ul li:nth-child(3) {
     margin-top: 10px;
     border: 1px solid;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 #car-search-button:hover {
@@ -272,6 +273,14 @@ nav ul li:nth-child(3) {
 .add-car-form button {
     margin-bottom: 10px;
     font-size: 18px;
+}
+
+.password-change-success {
+    background-color: #f7f7f7db;
+    max-width: 33%;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: auto;
 }
 
 
