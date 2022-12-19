@@ -1,5 +1,7 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DetailView, TemplateView
 from django.contrib.auth.models import User
 
@@ -7,7 +9,6 @@ from cars import forms, models
 
 
 class AddCarView(CreateView):
-
     model = models.Car
     fields = [
         'car_brand',
@@ -35,7 +36,6 @@ class AddCarView(CreateView):
 
 
 class CarProfileView(DetailView):
-
     model = models.Car
 
     def get_context_data(self, **kwargs):
@@ -43,6 +43,7 @@ class CarProfileView(DetailView):
         return context
 
 
-class CarRent(TemplateView):
-    template_name = 'cars/car_rent.html'
-
+def car_rent_view(request, pk):
+    
+    car = Car.objects.get(pk=pk)
+    
