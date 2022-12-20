@@ -21,6 +21,7 @@ class Car(models.Model):
     is_rented = models.BooleanField(default=False)
     location = models.CharField(max_length=150, default=None)
     price_per_day = models.PositiveIntegerField(default=100)
+    renter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='car_renter', null=True)
 
     def __str__(self):
         return self.car_model
