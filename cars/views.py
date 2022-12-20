@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
@@ -6,6 +7,7 @@ from django.views.generic import CreateView, DetailView, TemplateView
 from django.contrib.auth.models import User
 
 from cars import forms, models
+from cars.forms import RentCarForm
 
 
 class AddCarView(CreateView):
@@ -44,6 +46,12 @@ class CarProfileView(DetailView):
 
 
 def car_rent_view(request, pk):
-    
-    car = Car.objects.get(pk=pk)
-    
+    car = models.Car.objects.get(pk=pk)
+    form = RentCarForm(request.POST)
+    if form.is_valid():
+        car.is_rented = True
+        car.save()
+        return render(request, 'cars/car_rent_confirm.html')
+
+    form = RentCarForm()
+    return render(request, 'cars/car_rent.html', {'form': form})
