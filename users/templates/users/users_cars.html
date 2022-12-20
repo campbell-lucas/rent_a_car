@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <div class="my_cars">
+        {% for car in cars %}
+            {{ car.car_brand }} {{ car.car_model }}
+            <a href="{% url 'users:return-car' %}"><button>Return</button></a>
+        {% empty %}
+            <h1>No cars rented</h1>
+        {% endfor %}
+    </div>
+{% endblock container %}
