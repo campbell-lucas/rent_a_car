@@ -6,9 +6,13 @@
         <div class="car-search-items">
             <ul>
                 {% for car in object_list %}
-                    <li>
-                        <a href="{% url 'cars:car-profile' pk=car.pk%}">{{ car.car_brand }} {{ car.car_model }}</a>
-                    </li>
+                    {% if not car.is_rented %}
+                        <li>
+                            <a href="{% url 'cars:car-profile' pk=car.pk%}">{{ car.car_brand }} {{ car.car_model }}</a>
+                        </li>
+                        {% else %}
+                            <h1>All cars seem to be rented for this category and city</h1>
+                    {% endif %}
                     {% empty %}
                         <h1>No cars in this city yet</h1>
                 {% endfor %}
