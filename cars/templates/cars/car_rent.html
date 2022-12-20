@@ -3,9 +3,12 @@
 {% block container %}
     <div class="background-opaque">
         <div class="background-shown">
-            <label for="days-count">How Many Days</label>
-                <input type="text" id="days-count">
-                <button type="submit">Rent</button>
+            <h1>Rent</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Rent</button>
+            </form>
         </div>
     </div>
 {% endblock container %}
