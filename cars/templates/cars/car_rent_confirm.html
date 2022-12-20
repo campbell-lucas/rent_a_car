@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="rent-confirmation">
+        <h1>Thank you for renting! Don't forget to return the car on return date</h1>
+        <a href="{% url 'home:home' %}">
+            Return to home page
+        </a>
+    </div>
+{% endblock container %}
