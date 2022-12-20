@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'home.apps.HomeConfig',
     'cars.apps.CarsConfig',
+    'templatetags',
 
 ]
 
