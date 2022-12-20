@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, reverse
-from django.views.generic import FormView
+from django.views.generic import FormView, ListView
+
+from cars.models import Car
 from . import forms
 
 
@@ -20,3 +22,20 @@ class SignupView(FormView):
 @login_required
 def profile_view(request):
     return render(request, 'users/profile.html')
+
+
+class MyCars(ListView):
+    model = Car
+    template_name = 'users/users_cars.html'
+    context_object_name = 'cars'
+
+    def get_queryset(self):
+        return Car.objects.filter(renter=self.request.user.pk)
+
+
+def return_car(request):
+    car = Car.objects.get(renter=request.user.pk)
+    car.is_rented = False
+    car.renter = None
+    car.save()
+    return render(request, 'cars/car_return_confirm.html')
