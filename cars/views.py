@@ -45,11 +45,14 @@ class CarProfileView(DetailView):
         return context
 
 
+@login_required
 def car_rent_view(request, pk):
     car = models.Car.objects.get(pk=pk)
     form = RentCarForm(request.POST)
     if form.is_valid():
         car.is_rented = True
+        user = User.objects.get(pk=request.user.pk)
+        car.renter = user
         car.save()
         return render(request, 'cars/car_rent_confirm.html')
 
