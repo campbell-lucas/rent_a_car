@@ -7,7 +7,7 @@ Clone the repo
 ```bash
 git clone git@github.com:campbell-lucas/rent_a_car.git
 ```
-Create your own environment variables file **.env** in: 
+Create your own environment variables file _.env_ in: 
 ```bash
 env/
 ```
