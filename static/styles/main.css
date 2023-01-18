@@ -301,4 +301,18 @@ nav ul li:nth-child(3) {
     padding: 10px;
 }
 
+.rent-confirmation {
+    background-color: #f7f7f7db;
+    max-width: 33%;
+    margin: auto;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rent-confirmation a {
+    margin: auto;
+    font-size: 20px
+}
+
 
