@@ -5,7 +5,7 @@ import os
 
 
 def create_superuser(apps, schema_editor):
-    User = apps.get_model('users', 'CustomUser')
+    User = get_user_model()
 
     DJ_SU_EMAIL = os.environ.get('DJ_SU_EMAIL')
     DJ_SU_USERNAME = os.environ.get('DJ_SU_USERNAME')
