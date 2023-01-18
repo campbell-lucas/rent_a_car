@@ -23,3 +23,8 @@ docker compose up
 - Rent the car you desire
 - Add your own car for retal via your profile page
 - Return your rented car once you are done via your profile page
+
+
+
+## Additional info.
+As the admin of the site, you may need to add additional cities which can be done via the admin panel.
