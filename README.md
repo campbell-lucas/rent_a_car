@@ -5,5 +5,13 @@ Portal for car rentals where you can signup, login, search for available cars in
 ## Run on your machine
 Clone the repo
 ```bash
-git clone blabla
+git clone git@github.com:campbell-lucas/rent_a_car.git
+```
+Create your own environment variables in: 
+```bash
+env/
+```
+Run the docker container
+```bash
+docker compose up
 ```
